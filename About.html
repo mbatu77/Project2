@@ -1,257 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HRH MBATU II of Njah-Etu | About</title>
-<style>
-  :root {
-    --royal-maroon: #5C1A1B;
-    --deep-maroon: #3D1010;
-    --gold: #C89B3C;
-    --pale-gold: #E8D5A8;
-    --ivory: #FBF7EE;
-    --charcoal: #2B2320;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techub Mankis LLC | About</title>
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-  body {
-    font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
-    background: var(--ivory);
-    color: var(--charcoal);
-    line-height: 1.7;
-  }
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
 
-  /* Header / crest band */
-  header {
-    background: linear-gradient(160deg, var(--royal-maroon) 0%, var(--deep-maroon) 100%);
-    color: var(--pale-gold);
-    padding: 72px 24px 64px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            padding: 20px 0;
+        }
 
-  header::before,
-  header::after {
-    content: "";
-    position: absolute;
-    top: -60px;
-    width: 220px;
-    height: 220px;
-    border: 2px solid rgba(200, 155, 60, 0.15);
-    border-radius: 50%;
-  }
+        .container {
+            width: 85%;
+            margin: auto;
+        }
 
-  header::before { left: -80px; }
-  header::after { right: -80px; }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  .crest {
-    width: 84px;
-    height: 84px;
-    margin: 0 auto 22px;
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--gold);
-    letter-spacing: 1px;
-    background: radial-gradient(circle, rgba(200,155,60,0.08), transparent 70%);
-  }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-  .title-eyebrow {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 14px;
-  }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
 
-  h1 {
-    font-size: clamp(1.9rem, 4.5vw, 2.9rem);
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    margin-bottom: 12px;
-  }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
 
-  .subtitle {
-    font-style: italic;
-    font-size: 17px;
-    color: var(--pale-gold);
-    opacity: 0.9;
-  }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
 
-  .divider {
-    width: 70px;
-    height: 3px;
-    background: var(--gold);
-    margin: 26px auto 0;
-    border-radius: 2px;
-  }
+        .page-hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: white;
+        }
 
-  /* Main content */
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 64px 28px 90px;
-  }
+        .page-hero h1 {
+            font-size: 40px;
+            color: #0d47a1;
+            margin-bottom: 15px;
+        }
 
-  .section-label {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--royal-maroon);
-    font-weight: 600;
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+        .page-hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
 
-  .section-label::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-  }
+        .about-content {
+            padding: 50px 0;
+        }
 
-  p {
-    font-size: 17px;
-    color: #3A312C;
-    margin-bottom: 26px;
-  }
+        .about-content .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-  .facts {
-    margin-top: 56px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 20px;
-  }
+        .about-block {
+            background: white;
+            padding: 30px;
+            flex: 1;
+            min-width: 260px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-  .fact-card {
-    background: var(--ivory);
-    border: 1px solid rgba(92, 26, 27, 0.15);
-    border-top: 3px solid var(--gold);
-    border-radius: 4px;
-    padding: 22px 20px;
-  }
+        .about-block h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
 
-  .fact-card h3 {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--royal-maroon);
-    margin-bottom: 8px;
-  }
+        .mission {
+            background: white;
+            padding: 40px 0;
+        }
 
-  .fact-card p {
-    font-size: 15px;
-    color: var(--charcoal);
-    margin-bottom: 0;
-  }
+        .mission .container {
+            text-align: center;
+        }
 
-  .pillars {
-    margin-top: 56px;
-  }
+        .mission h2 {
+            color: #0d47a1;
+            margin-bottom: 20px;
+        }
 
-  .pillar-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 14px;
-    margin-top: 20px;
-  }
+        .mission p {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+        }
 
-  .pillar-list li {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    background: linear-gradient(135deg, var(--royal-maroon), var(--deep-maroon));
-    color: var(--pale-gold);
-    padding: 16px 18px;
-    border-radius: 4px;
-    text-align: center;
-    border: 1px solid rgba(200, 155, 60, 0.4);
-  }
+        .values {
+            padding: 50px 0;
+        }
 
-  footer {
-    text-align: center;
-    padding: 30px 20px 50px;
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    color: #8a7a6a;
-    letter-spacing: 0.04em;
-  }
+        .values h2 {
+            text-align: center;
+            color: #0d47a1;
+            margin-bottom: 30px;
+        }
 
-  @media (max-width: 480px) {
-    header { padding: 56px 20px 48px; }
-    main { padding: 48px 20px 70px; }
-  }
-</style>
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            flex: 1;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #0d47a1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #08306b;
+        }
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content .container,
+            .cards {
+                flex-direction: column;
+            }
+
+            .page-hero h1 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-  <header>
-    <div class="crest">M</div>
-    <div class="title-eyebrow">His Royal Highness</div>
-    <h1>MBATU II</h1>
-    <div class="subtitle">Fon of Njah-Etu, Meta Clan, Momo Division</div>
-    <div class="divider"></div>
-  </header>
+<header>
+    <div class="container">
 
-  <main>
-    <section>
-      <div class="section-label">About</div>
-      <p>His Royal Highness (HRH) MBATU II is a respected traditional ruler of the Njah-Etu Fondom in the Meta Clan of Momo Division, in the Northwest Region of Cameroon. As custodian of the customs, traditions, and cultural heritage of the Njah-Etu people, he is committed to promoting peace, unity, good governance, and sustainable community development.</p>
-      <p>HRH MBATU II advocates for youth empowerment, education, social cohesion, and the preservation of the rich cultural identity of the Meta people. Through his leadership, he continues to encourage dialogue, reconciliation, and collective action aimed at improving the welfare and progress of the Njah-Etu community, while strengthening cooperation with other communities within the Meta Clan.</p>
-    </section>
+        <nav>
+            <div class="logo">
+                Techub Mankis LLC
+            </div>
 
-    <section class="facts">
-      <div class="fact-card">
-        <h3>Title</h3>
-        <p>Fon of Njah-Etu</p>
-      </div>
-      <div class="fact-card">
-        <h3>Clan</h3>
-        <p>Meta Clan</p>
-      </div>
-      <div class="fact-card">
-        <h3>Division</h3>
-        <p>Momo Division</p>
-      </div>
-      <div class="fact-card">
-        <h3>Region</h3>
-        <p>Northwest Region, Cameroon</p>
-      </div>
-    </section>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-    <section class="pillars">
-      <div class="section-label">Areas of Focus</div>
-      <ul class="pillar-list">
-        <li>Peace &amp; Unity</li>
-        <li>Good Governance</li>
-        <li>Youth Empowerment</li>
-        <li>Education</li>
-        <li>Cultural Heritage</li>
-        <li>Community Development</li>
-      </ul>
-    </section>
-  </main>
+        </nav>
 
-  <footer>
-    Njah-Etu Fondom &middot; Meta Clan &middot; Momo Division &middot; Northwest Region, Cameroon
-  </footer>
+    </div>
+</header>
+
+
+<section class="page-hero">
+
+    <h1>About Techub Mankis LLC</h1>
+
+    <p>
+        Learn more about who we are, what drives us, and how we help
+        individuals, businesses, and organizations grow through technology.
+    </p>
+
+</section>
+
+
+<section class="about-content">
+
+<div class="container">
+
+    <div class="about-block">
+        <h3>Who We Are</h3>
+        <p>
+            Techub Mankis LLC is a technology-driven company committed to
+            delivering innovative digital solutions. We combine technical
+            expertise with a passion for problem-solving to help our clients
+            navigate an ever-changing digital landscape.
+        </p>
+    </div>
+
+    <div class="about-block">
+        <h3>What We Believe</h3>
+        <p>
+            We believe technology should be accessible, practical, and built
+            around real needs. Every solution we deliver is designed to be
+            reliable, scalable, and genuinely useful to the people who use it.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="mission">
+
+<div class="container">
+    <h2>Our Mission</h2>
+    <p>
+        To empower individuals, businesses, and organizations with modern
+        technology solutions and training that improve productivity,
+        efficiency, and long-term growth.
+    </p>
+</div>
+
+</section>
+
+
+<section class="values">
+
+<div class="container">
+
+<h2>Our Core Values</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Innovation</h3>
+        <p>
+            We continuously explore new tools and approaches to deliver
+            forward-thinking solutions.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Integrity</h3>
+        <p>
+            We build trust through honesty, transparency, and reliable
+            service in everything we do.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Excellence</h3>
+        <p>
+            We hold ourselves to a high standard, aiming for quality and
+            impact in every project we undertake.
+        </p>
+    </div>
+
+</div>
+
+<div style="text-align: center;">
+    <a href="contact.html" class="btn">Get in Touch</a>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Techub Mankis LLC. All Rights Reserved.
+</p>
+
+</footer>
+
 
 </body>
 </html>
