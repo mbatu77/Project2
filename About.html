@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRH MBATU II of Njah-Etu | About</title>
+<style>
+  :root {
+    --royal-maroon: #5C1A1B;
+    --deep-maroon: #3D1010;
+    --gold: #C89B3C;
+    --pale-gold: #E8D5A8;
+    --ivory: #FBF7EE;
+    --charcoal: #2B2320;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+    background: var(--ivory);
+    color: var(--charcoal);
+    line-height: 1.7;
+  }
+
+  /* Header / crest band */
+  header {
+    background: linear-gradient(160deg, var(--royal-maroon) 0%, var(--deep-maroon) 100%);
+    color: var(--pale-gold);
+    padding: 72px 24px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before,
+  header::after {
+    content: "";
+    position: absolute;
+    top: -60px;
+    width: 220px;
+    height: 220px;
+    border: 2px solid rgba(200, 155, 60, 0.15);
+    border-radius: 50%;
+  }
+
+  header::before { left: -80px; }
+  header::after { right: -80px; }
+
+  .crest {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 22px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    background: radial-gradient(circle, rgba(200,155,60,0.08), transparent 70%);
+  }
+
+  .title-eyebrow {
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-style: italic;
+    font-size: 17px;
+    color: var(--pale-gold);
+    opacity: 0.9;
+  }
+
+  .divider {
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin: 26px auto 0;
+    border-radius: 2px;
+  }
+
+  /* Main content */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 28px 90px;
+  }
+
+  .section-label {
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--royal-maroon);
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  p {
+    font-size: 17px;
+    color: #3A312C;
+    margin-bottom: 26px;
+  }
+
+  .facts {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+  }
+
+  .fact-card {
+    background: var(--ivory);
+    border: 1px solid rgba(92, 26, 27, 0.15);
+    border-top: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 22px 20px;
+  }
+
+  .fact-card h3 {
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--royal-maroon);
+    margin-bottom: 8px;
+  }
+
+  .fact-card p {
+    font-size: 15px;
+    color: var(--charcoal);
+    margin-bottom: 0;
+  }
+
+  .pillars {
+    margin-top: 56px;
+  }
+
+  .pillar-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .pillar-list li {
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background: linear-gradient(135deg, var(--royal-maroon), var(--deep-maroon));
+    color: var(--pale-gold);
+    padding: 16px 18px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid rgba(200, 155, 60, 0.4);
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #8a7a6a;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 56px 20px 48px; }
+    main { padding: 48px 20px 70px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="crest">M</div>
+    <div class="title-eyebrow">His Royal Highness</div>
+    <h1>MBATU II</h1>
+    <div class="subtitle">Fon of Njah-Etu, Meta Clan, Momo Division</div>
+    <div class="divider"></div>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-label">About</div>
+      <p>His Royal Highness (HRH) MBATU II is a respected traditional ruler of the Njah-Etu Fondom in the Meta Clan of Momo Division, in the Northwest Region of Cameroon. As custodian of the customs, traditions, and cultural heritage of the Njah-Etu people, he is committed to promoting peace, unity, good governance, and sustainable community development.</p>
+      <p>HRH MBATU II advocates for youth empowerment, education, social cohesion, and the preservation of the rich cultural identity of the Meta people. Through his leadership, he continues to encourage dialogue, reconciliation, and collective action aimed at improving the welfare and progress of the Njah-Etu community, while strengthening cooperation with other communities within the Meta Clan.</p>
+    </section>
+
+    <section class="facts">
+      <div class="fact-card">
+        <h3>Title</h3>
+        <p>Fon of Njah-Etu</p>
+      </div>
+      <div class="fact-card">
+        <h3>Clan</h3>
+        <p>Meta Clan</p>
+      </div>
+      <div class="fact-card">
+        <h3>Division</h3>
+        <p>Momo Division</p>
+      </div>
+      <div class="fact-card">
+        <h3>Region</h3>
+        <p>Northwest Region, Cameroon</p>
+      </div>
+    </section>
+
+    <section class="pillars">
+      <div class="section-label">Areas of Focus</div>
+      <ul class="pillar-list">
+        <li>Peace &amp; Unity</li>
+        <li>Good Governance</li>
+        <li>Youth Empowerment</li>
+        <li>Education</li>
+        <li>Cultural Heritage</li>
+        <li>Community Development</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Njah-Etu Fondom &middot; Meta Clan &middot; Momo Division &middot; Northwest Region, Cameroon
+  </footer>
+
+</body>
+</html>
