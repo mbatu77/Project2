@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techub Mankis LLC | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #0d47a1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #0d47a1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #08306b;
+        }
+
+        .services {
+            padding: 50px 0;
+        }
+
+        .services h2 {
+            text-align: center;
+            color: #0d47a1;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            flex: 1;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+        <nav>
+            <div class="logo">
+                Techub Mankis LLC
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <h1>Welcome to Techub Mankis LLC</h1>
+
+    <p>
+        Techub Mankis LLC is a technology-driven company dedicated to providing
+        innovative digital solutions, software development services, IT consulting,
+        and modern technology training. We help individuals, businesses, and
+        organizations use technology to improve productivity and achieve growth.
+    </p>
+
+    <a href="about.html" class="btn">Learn More</a>
+
+</section>
+
+
+<section class="services">
+
+<div class="container">
+
+<h2>What We Do</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Software Development</h3>
+        <p>
+            We design and develop reliable websites, applications, and customized
+            digital solutions that meet modern business needs.
+        </p>
+    </div>
+
+
+    <div class="card">
+        <h3>IT Solutions</h3>
+        <p>
+            We provide technology support, system setup, networking solutions,
+            and digital transformation services.
+        </p>
+    </div>
+
+
+    <div class="card">
+        <h3>Technology Training</h3>
+        <p>
+            We empower people with practical skills in programming, web development,
+            cybersecurity, and other emerging technologies.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Techub Mankis LLC. All Rights Reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
