@@ -119,6 +119,7 @@ nav a:hover{
     transition: all .3s ease;
     box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 5px;
 }
 
 .btn:hover{
@@ -285,8 +286,12 @@ section{
     color: #e9d5ff;
 }
 
-#contact .btn {
+.btn-container {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 footer{
@@ -479,7 +484,11 @@ development techniques.
 
 <p>Phone: +237 671 459 379 </p>
 
-<a class="btn" href="#">Download CV</a>
+<div class="btn-container">
+    <a class="btn" href="https://www.facebook.com/share/19CnoPWow5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Connect on Facebook</a>
+    <a class="btn" href="https://github.com/mbatu77" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="#">Download CV</a>
+</div>
 
 </center>
 
