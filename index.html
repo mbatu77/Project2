@@ -1,230 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techub Mankis LLC | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: #f4f7fb;
-            color: #333;
-            line-height: 1.6;
-        }
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        header {
-            background: linear-gradient(135deg, #0d47a1, #1976d2);
-            color: white;
-            padding: 20px 0;
-        }
+body{
+    /* Rich Purple Gradient Background */
+    background: linear-gradient(135deg, #2b0938 0%, #1a0624 50%, #16041e 100%);
+    background-attachment: fixed;
+    color: #fff;
+    overflow-x: hidden;
+}
 
-        .container {
-            width: 85%;
-            margin: auto;
-        }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(26, 6, 36, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffffff, #d8b4fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
+nav a{
+    color: #e9d5ff;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: 500;
+    position: relative;
+    transition: .3s;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #c084fc;
+    transition: 0.3s;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+nav a:hover::after {
+    width: 100%;
+}
 
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: #ffcc00;
-        }
+nav a:hover{
+    color: #ffffff;
+}
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: white;
-        }
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
 
-        .hero h1 {
-            font-size: 45px;
-            color: #0d47a1;
-            margin-bottom: 20px;
-        }
+.hero-text{
+    max-width: 600px;
+}
 
-        .hero p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: auto;
-            color: #555;
-        }
+.hero-text h3{
+    font-size: 24px;
+    color: #d8b4fe;
+    font-weight: 400;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background: #0d47a1;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+.hero-text h1{
+    font-size: 65px;
+    margin: 10px 0 20px 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+}
 
-        .btn:hover {
-            background: #08306b;
-        }
+.hero-text p{
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #e9d5ff;
+    font-size: 1.05rem;
+}
 
-        .services {
-            padding: 50px 0;
-        }
+.btn{
+    display: inline-block;
+    background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+    color: white;
+    padding: 16px 38px;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: all .3s ease;
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-        .services h2 {
-            text-align: center;
-            color: #0d47a1;
-            margin-bottom: 30px;
-        }
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(168, 85, 247, 0.6);
+    background: linear-gradient(135deg, #c084fc 0%, #9333ea 100%);
+}
 
-        .cards {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
+.hero-image img{
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(216, 180, 254, 0.5);
+    box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
+    animation: float 5s ease-in-out infinite;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            flex: 1;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
 
-        .card h3 {
-            color: #1976d2;
-            margin-bottom: 15px;
-        }
+section{
+    padding: 120px 8% 80px 8%;
+}
 
-        footer {
-            background: #0d47a1;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
+.title{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    position: relative;
+    font-weight: 700;
+}
 
-        @media(max-width: 768px) {
+.title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #a855f7;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
 
-            nav {
-                flex-direction: column;
-            }
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
 
-            nav ul {
-                margin-top: 15px;
-                flex-direction: column;
-                text-align: center;
-            }
+.about > div {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+}
 
-            .cards {
-                flex-direction: column;
-            }
+.about h3 {
+    font-size: 22px;
+    color: #d8b4fe;
+    margin-bottom: 15px;
+}
 
-            .hero h1 {
-                font-size: 32px;
-            }
-        }
+.about p {
+    color: #e9d5ff;
+    line-height: 1.7;
+}
 
-    </style>
+.skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
 
+.card{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 35px 25px;
+    border-radius: 20px;
+    transition: .4s ease;
+}
+
+.card h3 {
+    color: #d8b4fe;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(216, 180, 254, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: rgba(216, 180, 254, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.project img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+}
+
+.project-content{
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.project-content p {
+    color: #e9d5ff;
+    font-size: 0.95rem;
+}
+
+#contact center {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #e9d5ff;
+}
+
+#contact .btn {
+    margin-top: 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 30px;
+    background: rgba(22, 4, 30, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #c084fc;
+    font-size: 0.9rem;
+}
+
+@media(max-width: 900px){
+    header {
+        padding: 20px 5%;
+    }
+    
+    .hero{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 140px;
+        height: auto;
+    }
+
+    .hero-image{
+        margin-top: 50px;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1{
+        font-size: 45px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="container">
 
-        <nav>
-            <div class="logo">
-                Techub Mankis LLC
-            </div>
+<div class="logo">Portfolio</div>
 
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-        </nav>
-
-    </div>
 </header>
-
 
 <section class="hero">
 
-    <h1>Welcome to Techub Mankis LLC</h1>
+<div class="hero-text">
 
-    <p>
-        Techub Mankis LLC is a technology-driven company dedicated to providing
-        innovative digital solutions, software development services, IT consulting,
-        and modern technology training. We help individuals, businesses, and
-        organizations use technology to improve productivity and achieve growth.
-    </p>
+<h3>Hello, I'm</h3>
 
-    <a href="about.html" class="btn">Learn More</a>
+<h1>ST. MBATU</h1>
+
+<p>
+Creative Web Designer & Front-End Developer passionate about creating elegant,
+responsive, and interactive digital experiences.
+</p>
+
+<a href="#projects" class="btn">View My Work</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://www.facebook.com/photo?fbid=3978261952307344&set=a.104287509704827" alt="Profile">
+
+</div>
 
 </section>
 
+<section id="about">
 
-<section class="services">
+<h2 class="title">About Me</h2>
 
-<div class="container">
+<div class="about">
 
-<h2>What We Do</h2>
+<div>
 
-<div class="cards">
+<h3>Who I Am</h3>
 
-    <div class="card">
-        <h3>Software Development</h3>
-        <p>
-            We design and develop reliable websites, applications, and customized
-            digital solutions that meet modern business needs.
-        </p>
-    </div>
+<p>
+I am a passionate and dedicated Software Engineer with a strong interest in designing, developing,
+ and maintaining innovative software solutions that solve real-world problems. I enjoy building efficient, 
+ user-friendly, and scalable applications while continuously expanding my knowledge of modern technologies and 
+ industry best practices.
 
+With a problem-solving mindset and a commitment to excellence, I strive to deliver high-quality software
+ through teamwork, creativity, and attention to detail. I am driven by continuous learning and innovation, 
+ always seeking opportunities to improve systems, enhance user experiences, and contribute meaningfully to
+  the growth of organizations and communities through technology.
+</p>
 
-    <div class="card">
-        <h3>IT Solutions</h3>
-        <p>
-            We provide technology support, system setup, networking solutions,
-            and digital transformation services.
-        </p>
-    </div>
+</div>
 
+<div>
 
-    <div class="card">
-        <h3>Technology Training</h3>
-        <p>
-            We empower people with practical skills in programming, web development,
-            cybersecurity, and other emerging technologies.
-        </p>
-    </div>
+<h3>Experience</h3>
+
+<p>
+Specializing in HTML, CSS, JavaScript, UI Design, and modern web
+development techniques.
+</p>
 
 </div>
 
@@ -232,15 +405,91 @@
 
 </section>
 
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="card">
+<h3>HTML5</h3>
+<p>Semantic and accessible markup.</p>
+</div>
+
+<div class="card">
+<h3>CSS3</h3>
+<p>Responsive layouts and animations.</p>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>Interactive user interfaces.</p>
+</div>
+
+<div class="card">
+<h3>UI Design</h3>
+<p>Clean and modern design systems.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<img src="https://via.placeholder.com/600x400/3b0764/ffffff?text=Project+One" alt="Project One">
+<div class="project-content">
+<h3>Project One</h3>
+<p>Modern responsive website.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://via.placeholder.com/600x400/3b0764/ffffff?text=Project+Two" alt="Project Two">
+<div class="project-content">
+<h3>Project Two</h3>
+<p>Creative portfolio design.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="https://via.placeholder.com/600x400/3b0764/ffffff?text=Project+Three" alt="Project Three">
+<div class="project-content">
+<h3>Project Three</h3>
+<p>Interactive web application.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<center>
+
+<p>Email: julianapelson@gmail.com</p>
+
+<p>Phone: +237 671 459 379 </p>
+
+<a class="btn" href="#">Download CV</a>
+
+</center>
+
+</section>
 
 <footer>
 
-<p>
-© 2026 Techub Mankis LLC. All Rights Reserved.
-</p>
+© 2026 ST. MBATU. All Rights Reserved.
 
 </footer>
-
 
 </body>
 </html>
